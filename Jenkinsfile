@@ -37,6 +37,7 @@ pipeline{
         stage('API Test') {
             steps {
                 git credentialsId: 'github_login', url: 'https://github.com/varronche/tasks-api-test.git'
+                sh 'mvn test'
             }
         }
     }
